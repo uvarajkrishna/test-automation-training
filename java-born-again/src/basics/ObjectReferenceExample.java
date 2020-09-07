@@ -1,0 +1,25 @@
+package basics;
+
+import java.awt.Point;
+
+public class ObjectReferenceExample {
+
+    public static void main(String[] arguments) {
+        Point pt1;
+        Point pt2;
+        Point pt3;
+        //Object Creation
+        pt1 = new Point(100, 100);
+        // Object reference creation
+        pt2 = pt1;
+        // Object cloning
+        pt3 = (Point) pt1.clone();
+
+        pt1.x = 200;
+        pt1.y = 200;
+
+        System.out.println("Point1: " + pt1.x + ", " + pt1.y);
+        System.out.println("Point2: " + pt2.x + ", " + pt2.y);
+        System.out.println("Point3: " + pt3.x + ", " + pt3.y);
+    }
+}
